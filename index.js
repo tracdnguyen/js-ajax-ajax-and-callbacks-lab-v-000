@@ -15,5 +15,15 @@ function showRepositories(data){
   return `<ul>${repo}</ul>`
 }
 
+function renderRepo(repo){
+  return `<li><b>Name: </b><spanp>${repo.name}</span><br>
+  <b>Description: </b><span>${repo.description}</span><br>
+  <b>URL: </b><span>${repo.html_url}</span>
+  <p><a href="#" data-repository="${repo.name}" data-owner="${repo.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
+  </li><br>
+  `
+}
+
+
 $(document).ready(function (){
 });
